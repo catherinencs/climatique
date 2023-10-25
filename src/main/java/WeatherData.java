@@ -12,6 +12,7 @@ public class WeatherData {
   public final int pressure;
   public final int humidity;
 
+
   public WeatherData(String jsonResponse) {
     JSONObject obj = new JSONObject(jsonResponse);
 
@@ -25,5 +26,6 @@ public class WeatherData {
     this.tempMax = obj.getJSONObject("main").getDouble("temp_max");
     this.pressure = obj.getJSONObject("main").getInt("pressure");
     this.humidity = obj.getJSONObject("main").getInt("humidity");
+
   }
 }
