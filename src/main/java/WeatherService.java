@@ -13,6 +13,7 @@ public class WeatherService {
     HttpUrl url = HttpUrl.parse(BASE_URL).newBuilder()
             .addQueryParameter("q", city)
             .addQueryParameter("appid", API_KEY)
+            .addQueryParameter("units", "metric")
             .build();
 
     Request request = new Request.Builder().url(url).build();

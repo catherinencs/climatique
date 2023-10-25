@@ -19,10 +19,12 @@ public class ClothingSuggestion {
 
   private ClothingStrategy determineStrategy(WeatherData weatherData) {
     // Criteria for hot weather
-    if (weatherData.temp > 25) {
+    if (weatherData.temp > 24) {
       return new HotWeather();
+    } else if (weatherData.temp > 10) {
+      return new MildWeather();
+    } else  {
+      return new ColdWeather();
     }
-    // Add more here
-    return null;
   }
 }
